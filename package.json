@@ -1,0 +1,51 @@
+{
+  "name": "colony-keeper-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "dev": "nodemon",
+    "start": "ts-node ./src/index.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "migrate:dev": "cross-env NODE_ENV=development npx sequelize-cli db:migrate",
+    "migrate:test": "cross-env NODE_ENV=test npx sequelize-cli db:migrate"
+  },
+  "keywords": [],
+  "author": "Richard Cook",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.3.3",
+    "@as-integrations/aws-lambda": "^2.0.1",
+    "colony-keeper-core": "file:../colony-keeper-core",
+    "colony-keeper-use-cases": "file:../colony-keeper-use-cases",
+    "graphql": "^16.6.0",
+    "md5": "^2.3.0",
+    "mysql": "^2.18.1",
+    "pg": "^8.9.0",
+    "sequelize": "^6.29.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "cross-env": "^7.0.3",
+    "csv": "^6.3.6",
+    "eslint": "^8.34.0",
+    "eslint-plugin-import": "^2.27.5",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.6.0",
+    "serverless-esbuild": "^1.39.0",
+    "serverless-plugin-common-excludes": "^4.0.0",
+    "serverless-plugin-include-dependencies": "^5.1.0",
+    "serverless-plugin-typescript": "^2.1.4",
+    "serverless-tscpaths": "^0.0.8",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^4.9.5"
+  }
+}

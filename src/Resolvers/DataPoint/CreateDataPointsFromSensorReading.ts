@@ -1,0 +1,54 @@
+import { INullable, IReading, Reading, Sensor } from 'colony-keeper-core';
+import { IReadingRepository, ISensorRepository } from 'colony-keeper-use-cases';
+
+export interface ICreateDataPointsFromSensorReadingParams {
+    sensorId: string;
+    timestamp: number;
+    value1: INullable<number>;
+    value2: INullable<number>;
+}
+
+export interface ICreateDataPointsFromSensorReadingResult {
+    dataPoints: IReading[];
+}
+
+export class CreateDataPointsFromSensorReading {
+    private readonly _readingRepository: IReadingRepository;
+    private readonly _sensorRepository: ISensorRepository;
+
+    public constructor (readingRepository: IReadingRepository, sensorRepository: ISensorRepository) {
+        this._readingRepository = readingRepository;
+        this._sensorRepository = sensorRepository;
+    }
+
+    public async use (params: ICreateDataPointsFromSensorReadingParams): Promise<ICreateDataPointsFromSensorReadingResult> {
+        const { sensorId, value1 }: ICreateDataPointsFromSensorReadingParams = params;
+        const sensor: INullable<Sensor> = await this._sensorRepository.findBySsid(sensorId);
+
+        if (sensor === null) {
+            throw new Error('Sensor not found');
+        }
+
+        const dataPoints: IReading[] = [];
+        const value: number = Math.round(value1 * 1000) / 1000;
+
+        if (sensor.type1 === 'NONE') {
+            return;
+        }
+
+        const reading: Reading = await this._readingRepository.createReading(Reading.create({
+            hiveId: sensor.hiveId,
+            boxId: sensor.boxId,
+            sensorId: sensor.id,
+            type: sensor.type1,
+            value: value + (sensor.calibration ?? 0),
+            timestamp: new Date(),
+        }));
+
+        dataPoints.push(reading.toObject());
+
+        return {
+            dataPoints: dataPoints,
+        };
+    }
+}

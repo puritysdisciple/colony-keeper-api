@@ -1,0 +1,27 @@
+service: apollo-lambda
+provider:
+  name: aws
+  runtime: nodejs16.x
+  httpApi:
+    cors: true
+package:
+  excludeDevDependencies: false
+functions:
+  graphql:
+    handler: ./src/lambda.graphqlHandler
+    events:
+      - httpApi:
+          path: /
+          method: POST
+      - httpApi:
+          path: /
+          method: GET
+plugins:
+  - serverless-plugin-typescript
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
+
+custom:
+  webpackIncludeModules:
+    forceInclude:
+      - pg
