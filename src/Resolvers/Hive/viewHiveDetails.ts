@@ -32,9 +32,16 @@ export const viewHiveDetailsSchema: string = `
         averageTemperature: Float
     }
     
+    enum BeeActivity {
+        NONE
+        LOW
+        MEDIUM
+        HIGH
+    }
+    
     type FrameGap {
         brood: Boolean!
-        bees: Boolean!
+        bees: BeeActivity!
         stats: FrameGapStats!
         sensorId: String
     }

@@ -177,7 +177,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/apollo-lambda/dev/1703978264791-2023-12-30T23:17:44.791Z/apollo-lambda.zip"
+                "S3Key": "serverless/apollo-lambda/dev/1704024854030-2023-12-31T12:14:14.030Z/apollo-lambda.zip"
               },
               "Handler": "./src/lambda.graphqlHandler",
               "Runtime": "nodejs16.x",
@@ -195,14 +195,14 @@
               "GraphqlLogGroup"
             ]
           },
-          "GraphqlLambdaVersionUePpzunAkrKEHjULETvWBQcXhdzyssOjkpaJeRX0D4Q": {
+          "GraphqlLambdaVersionnYr9yC9G9hikr8Bu3T7gSYoUawq8caqKpzp4TkD2QcY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GraphqlLambdaFunction"
               },
-              "CodeSha256": "Ms+bwz+VHwNJNvCm4Nxv7Dm66xUdVuCPypyKVqUP96E="
+              "CodeSha256": "ki50Cw0rSvA/6ZG7TTA+jS5mrV5nXiS1F1QooQsXW7k="
             }
           },
           "HttpApi": {
@@ -350,7 +350,7 @@
           "GraphqlLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GraphqlLambdaVersionUePpzunAkrKEHjULETvWBQcXhdzyssOjkpaJeRX0D4Q"
+              "Ref": "GraphqlLambdaVersionnYr9yC9G9hikr8Bu3T7gSYoUawq8caqKpzp4TkD2QcY"
             },
             "Export": {
               "Name": "sls-apollo-lambda-dev-GraphqlLambdaFunctionQualifiedArn"
@@ -522,7 +522,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GraphqlLambdaVersionUePpzunAkrKEHjULETvWBQcXhdzyssOjkpaJeRX0D4Q"
+        "versionLogicalId": "GraphqlLambdaVersionnYr9yC9G9hikr8Bu3T7gSYoUawq8caqKpzp4TkD2QcY"
       }
     },
     "configValidationMode": "warn",
@@ -2764,36 +2764,23 @@
           "node_modules/colony-keeper-core/jest.config.js",
           "node_modules/colony-keeper-core/LICENSE",
           "node_modules/colony-keeper-core/package.json",
-          "node_modules/colony-keeper-core/src/entities/Alert.js",
           "node_modules/colony-keeper-core/src/entities/Alert.ts",
-          "node_modules/colony-keeper-core/src/entities/Apiary.js",
           "node_modules/colony-keeper-core/src/entities/Apiary.ts",
-          "node_modules/colony-keeper-core/src/entities/Box.js",
           "node_modules/colony-keeper-core/src/entities/Box.ts",
-          "node_modules/colony-keeper-core/src/entities/Device.js",
           "node_modules/colony-keeper-core/src/entities/Device.ts",
-          "node_modules/colony-keeper-core/src/entities/Entity.js",
           "node_modules/colony-keeper-core/src/entities/Entity.ts",
-          "node_modules/colony-keeper-core/src/entities/Frame.js",
           "node_modules/colony-keeper-core/src/entities/Frame.ts",
-          "node_modules/colony-keeper-core/src/entities/Hive.js",
           "node_modules/colony-keeper-core/src/entities/Hive.ts",
-          "node_modules/colony-keeper-core/src/entities/Reading.js",
           "node_modules/colony-keeper-core/src/entities/Reading.ts",
-          "node_modules/colony-keeper-core/src/entities/Sensor.js",
           "node_modules/colony-keeper-core/src/entities/Sensor.ts",
-          "node_modules/colony-keeper-core/src/entities/User.js",
           "node_modules/colony-keeper-core/src/entities/User.ts",
           "node_modules/colony-keeper-core/src/fix.ts",
           "node_modules/colony-keeper-core/src/generics/IImmutable.ts",
-          "node_modules/colony-keeper-core/src/generics/INullable.js",
           "node_modules/colony-keeper-core/src/generics/INullable.ts",
-          "node_modules/colony-keeper-core/src/generics/IOptional.js",
           "node_modules/colony-keeper-core/src/generics/IOptional.ts",
           "node_modules/colony-keeper-core/src/generics/IRequired.ts",
           "node_modules/colony-keeper-core/src/generics/relations/IBelongsTo.ts",
           "node_modules/colony-keeper-core/src/generics/relations/IHasMany.ts",
-          "node_modules/colony-keeper-core/src/index.js",
           "node_modules/colony-keeper-core/src/index.ts",
           "node_modules/colony-keeper-core/node_modules/uuid/dist/commonjs-browser/index.js",
           "node_modules/colony-keeper-core/node_modules/uuid/dist/commonjs-browser/md5.js",
@@ -3297,57 +3284,32 @@
           "node_modules/colony-keeper-use-cases/jest.config.js",
           "node_modules/colony-keeper-use-cases/LICENSE",
           "node_modules/colony-keeper-use-cases/package.json",
-          "node_modules/colony-keeper-use-cases/src/IAlertRepository.js",
+          "node_modules/colony-keeper-use-cases/src/BeeHealth.ts",
           "node_modules/colony-keeper-use-cases/src/IAlertRepository.ts",
-          "node_modules/colony-keeper-use-cases/src/IApiaryRepository.js",
           "node_modules/colony-keeper-use-cases/src/IApiaryRepository.ts",
-          "node_modules/colony-keeper-use-cases/src/IBoxRepository.js",
           "node_modules/colony-keeper-use-cases/src/IBoxRepository.ts",
-          "node_modules/colony-keeper-use-cases/src/IDeviceRepository.js",
           "node_modules/colony-keeper-use-cases/src/IDeviceRepository.ts",
-          "node_modules/colony-keeper-use-cases/src/IFrameRepository.js",
           "node_modules/colony-keeper-use-cases/src/IFrameRepository.ts",
-          "node_modules/colony-keeper-use-cases/src/IHiveRepository.js",
           "node_modules/colony-keeper-use-cases/src/IHiveRepository.ts",
-          "node_modules/colony-keeper-use-cases/src/importer.js",
-          "node_modules/colony-keeper-use-cases/src/index.js",
           "node_modules/colony-keeper-use-cases/src/index.ts",
-          "node_modules/colony-keeper-use-cases/src/IReadingRepository.js",
           "node_modules/colony-keeper-use-cases/src/IReadingRepository.ts",
-          "node_modules/colony-keeper-use-cases/src/ISensorRepository.js",
           "node_modules/colony-keeper-use-cases/src/ISensorRepository.ts",
-          "node_modules/colony-keeper-use-cases/src/IUserRepository.js",
           "node_modules/colony-keeper-use-cases/src/IUserRepository.ts",
-          "node_modules/colony-keeper-use-cases/src/IValidationError.js",
           "node_modules/colony-keeper-use-cases/src/IValidationError.ts",
-          "node_modules/colony-keeper-use-cases/src/typeSafeNull.js",
           "node_modules/colony-keeper-use-cases/src/typeSafeNull.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/AuthenticateUser.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/AuthenticateUser.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/CreateApiary.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/CreateApiary.ts",
           "node_modules/colony-keeper-use-cases/src/UseCases/CreateBox.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/CreateHive.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/CreateHive.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ListApiaries.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/ListApiaries.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/RegisterUser.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/RegisterUser.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ViewApiaryDetails.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewApiaryDetails.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/BroodProbabilityCalculator.js",
+          "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/BeeActivityCalculator.ts",
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/BroodProbabilityCalculator.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/HasBeeActivityCalculator.js",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/HasBeeActivityCalculator.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/HasBroodCalculator.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/HasBroodCalculator.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/index.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/index.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/StabilityCalculator.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/StabilityCalculator.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/UsagePercentageCalculator.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/UsagePercentageCalculator.ts",
-          "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/ViewHiveDetails.js",
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/ViewHiveDetails.ts",
           "node_modules/colony-keeper-use-cases/node_modules/eslint/conf/config-schema.js",
           "node_modules/colony-keeper-use-cases/node_modules/eslint/conf/default-cli-options.js",
@@ -4408,36 +4370,23 @@
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/jest.config.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/LICENSE",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/package.json",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Alert.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Alert.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Apiary.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Apiary.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Box.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Box.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Device.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Device.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Entity.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Entity.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Frame.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Frame.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Hive.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Hive.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Reading.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Reading.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Sensor.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/Sensor.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/User.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/entities/User.ts",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/fix.ts",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/generics/IImmutable.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/generics/INullable.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/generics/INullable.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/generics/IOptional.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/generics/IOptional.ts",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/generics/IRequired.ts",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/generics/relations/IBelongsTo.ts",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/generics/relations/IHasMany.ts",
-          "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/index.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/src/index.ts",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/node_modules/uuid/dist/commonjs-browser/index.js",
           "node_modules/colony-keeper-use-cases/node_modules/colony-keeper-core/node_modules/uuid/dist/commonjs-browser/md5.js",
@@ -5562,7 +5511,7 @@
           "../config/config.json"
         ],
         "artifact": "C:\\Users\\Tol\\WebstormProjects\\colony-keeper-api-v2\\.serverless\\apollo-lambda.zip",
-        "artifactDirectoryName": "serverless/apollo-lambda/dev/1703978264791-2023-12-30T23:17:44.791Z"
+        "artifactDirectoryName": "serverless/apollo-lambda/dev/1704024854030-2023-12-31T12:14:14.030Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -5579,7 +5528,7 @@
     "artifact": "C:\\Users\\Tol\\WebstormProjects\\colony-keeper-api-v2\\.build\\.serverless\\apollo-lambda.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/apollo-lambda/dev/1703978264791-2023-12-30T23:17:44.791Z",
+    "artifactDirectoryName": "serverless/apollo-lambda/dev/1704024854030-2023-12-31T12:14:14.030Z",
     "artifact": "apollo-lambda.zip"
   }
 }
