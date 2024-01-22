@@ -3,7 +3,6 @@ import { DataTypes, Model, Sequelize } from 'sequelize';
 
 interface IDeviceModelAttribute {
     id: string;
-    serial: string;
     userId: string;
     apiaryId: string;
     hiveId: INullable<string>;
@@ -12,7 +11,7 @@ interface IDeviceModelAttribute {
 
 export class DeviceModel extends Model<IDeviceModelAttribute> {
     declare public id: string;
-    declare public serial: string;
+    declare public ssid: string;
     declare public userId: string;
     declare public apiaryId: string;
     declare public hiveId: INullable<string>;
@@ -27,7 +26,6 @@ export class DeviceModel extends Model<IDeviceModelAttribute> {
     public static buildFromDevice (device: Device): DeviceModel {
         return DeviceModel.build({
             id: device.id,
-            serial: device.serial,
             userId: device.userId,
             apiaryId: device.apiaryId,
             hiveId: device.hiveId,
@@ -38,7 +36,6 @@ export class DeviceModel extends Model<IDeviceModelAttribute> {
     public toDevice (): Device {
         return Device.create({
             id: this.id,
-            serial: this.serial,
             userId: this.userId,
             apiaryId: this.apiaryId,
             hiveId: this.hiveId,
@@ -53,7 +50,6 @@ export function createDeviceModel (sequelize: Sequelize): typeof DeviceModel {
             type: DataTypes.UUID,
             primaryKey: true,
         },
-        serial: DataTypes.UUID,
         userId: DataTypes.UUID,
         apiaryId: DataTypes.UUID,
         hiveId: {

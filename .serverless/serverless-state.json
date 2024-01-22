@@ -177,7 +177,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/apollo-lambda/dev/1704024854030-2023-12-31T12:14:14.030Z/apollo-lambda.zip"
+                "S3Key": "serverless/apollo-lambda/dev/1705909214415-2024-01-22T07:40:14.415Z/apollo-lambda.zip"
               },
               "Handler": "./src/lambda.graphqlHandler",
               "Runtime": "nodejs16.x",
@@ -195,14 +195,14 @@
               "GraphqlLogGroup"
             ]
           },
-          "GraphqlLambdaVersionnYr9yC9G9hikr8Bu3T7gSYoUawq8caqKpzp4TkD2QcY": {
+          "GraphqlLambdaVersionQEXYISa9tsZd8bri8KYlwGpzL53orhsKlx5KK6X4": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GraphqlLambdaFunction"
               },
-              "CodeSha256": "ki50Cw0rSvA/6ZG7TTA+jS5mrV5nXiS1F1QooQsXW7k="
+              "CodeSha256": "SfShmCgjh3NbwWY/2UCoAcb14Vw4s9fj89rdKjLDuOg="
             }
           },
           "HttpApi": {
@@ -350,7 +350,7 @@
           "GraphqlLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GraphqlLambdaVersionnYr9yC9G9hikr8Bu3T7gSYoUawq8caqKpzp4TkD2QcY"
+              "Ref": "GraphqlLambdaVersionQEXYISa9tsZd8bri8KYlwGpzL53orhsKlx5KK6X4"
             },
             "Export": {
               "Name": "sls-apollo-lambda-dev-GraphqlLambdaFunctionQualifiedArn"
@@ -522,7 +522,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "GraphqlLambdaVersionnYr9yC9G9hikr8Bu3T7gSYoUawq8caqKpzp4TkD2QcY"
+        "versionLogicalId": "GraphqlLambdaVersionQEXYISa9tsZd8bri8KYlwGpzL53orhsKlx5KK6X4"
       }
     },
     "configValidationMode": "warn",
@@ -3296,6 +3296,8 @@
           "node_modules/colony-keeper-use-cases/src/ISensorRepository.ts",
           "node_modules/colony-keeper-use-cases/src/IUserRepository.ts",
           "node_modules/colony-keeper-use-cases/src/IValidationError.ts",
+          "node_modules/colony-keeper-use-cases/src/Math.ts",
+          "node_modules/colony-keeper-use-cases/src/Time.ts",
           "node_modules/colony-keeper-use-cases/src/typeSafeNull.ts",
           "node_modules/colony-keeper-use-cases/src/UseCases/AuthenticateUser.ts",
           "node_modules/colony-keeper-use-cases/src/UseCases/CreateApiary.ts",
@@ -3311,6 +3313,7 @@
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/StabilityCalculator.ts",
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/UsagePercentageCalculator.ts",
           "node_modules/colony-keeper-use-cases/src/UseCases/ViewHiveDetails/ViewHiveDetails.ts",
+          "node_modules/colony-keeper-use-cases/tsconfig.jest.json",
           "node_modules/colony-keeper-use-cases/node_modules/eslint/conf/config-schema.js",
           "node_modules/colony-keeper-use-cases/node_modules/eslint/conf/default-cli-options.js",
           "node_modules/colony-keeper-use-cases/node_modules/eslint/conf/globals.js",
@@ -5511,7 +5514,7 @@
           "../config/config.json"
         ],
         "artifact": "C:\\Users\\Tol\\WebstormProjects\\colony-keeper-api-v2\\.serverless\\apollo-lambda.zip",
-        "artifactDirectoryName": "serverless/apollo-lambda/dev/1704024854030-2023-12-31T12:14:14.030Z"
+        "artifactDirectoryName": "serverless/apollo-lambda/dev/1705909214415-2024-01-22T07:40:14.415Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -5528,7 +5531,7 @@
     "artifact": "C:\\Users\\Tol\\WebstormProjects\\colony-keeper-api-v2\\.build\\.serverless\\apollo-lambda.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/apollo-lambda/dev/1704024854030-2023-12-31T12:14:14.030Z",
+    "artifactDirectoryName": "serverless/apollo-lambda/dev/1705909214415-2024-01-22T07:40:14.415Z",
     "artifact": "apollo-lambda.zip"
   }
 }

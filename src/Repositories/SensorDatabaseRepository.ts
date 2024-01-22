@@ -1,4 +1,4 @@
-import { INullable, Sensor } from 'colony-keeper-core';
+import { IDataType, INullable, Sensor } from 'colony-keeper-core';
 import { ISensorRepository } from 'colony-keeper-use-cases';
 
 import { DatabaseContext } from '../DataSources/DatabaseContext';
@@ -57,6 +57,21 @@ export class SensorDatabaseRepository implements ISensorRepository {
         const model: INullable<SensorModel> = await this._context.models.sensor.findOne({
             where: {
                 ssid: ssid,
+            },
+        });
+
+        if (!model) {
+            return null;
+        }
+
+        return model.toSensor();
+    }
+
+    public async findByDeviceIdAndType (deviceId: string, type: IDataType): Promise<INullable<Sensor>> {
+        const model: INullable<SensorModel> = await this._context.models.sensor.findOne({
+            where: {
+                deviceId: deviceId,
+                type1: type,
             },
         });
 

@@ -60,6 +60,11 @@ export const viewHiveDetailsSchema: string = `
         readings: [ReadingStub]!
     }
     
+    type HiveDevice {
+        id: String!
+        batteryPercentage: Float!
+    }
+    
     type HiveDetails {
         id: String!
         name: String!
@@ -71,6 +76,7 @@ export const viewHiveDetailsSchema: string = `
         apiary: ApiaryStub!
         hive: HiveDetails!
         sensors: [SensorStub]!
+        devices: [HiveDevice]!
     }
     
     type ViewHiveDetailsApiaryNotFound {
@@ -143,6 +149,7 @@ export async function viewHiveDetailsResolver (_: any, params: any, context: ICo
         dataSources: {
             alert: alertRepository,
             box: boxRepository,
+            device: deviceRepository,
             apiary: apiaryRepository,
             hive: hiveRepository,
             reading: readingRepository,
@@ -167,6 +174,7 @@ export async function viewHiveDetailsResolver (_: any, params: any, context: ICo
         hive: hiveRepository,
         reading: readingRepository,
         sensor: sensorRepository,
+        device: deviceRepository,
     });
 
     await useCase.execute(hiveId, {

@@ -12,6 +12,8 @@ export interface ICreateDataPointsFromSensorReadingResult {
     dataPoints: IReading[];
 }
 
+const UNKNOWN_HIVE_ID: string = 'c5774021-83f8-452f-b398-13c78a5a3b29';
+
 export class CreateDataPointsFromSensorReading {
     private readonly _readingRepository: IReadingRepository;
     private readonly _sensorRepository: ISensorRepository;
@@ -23,10 +25,20 @@ export class CreateDataPointsFromSensorReading {
 
     public async use (params: ICreateDataPointsFromSensorReadingParams): Promise<ICreateDataPointsFromSensorReadingResult> {
         const { sensorId, value1 }: ICreateDataPointsFromSensorReadingParams = params;
-        const sensor: INullable<Sensor> = await this._sensorRepository.findBySsid(sensorId);
+        let sensor: INullable<Sensor> = await this._sensorRepository.findBySsid(sensorId);
 
         if (sensor === null) {
-            throw new Error('Sensor not found');
+            sensor = Sensor.create({
+                id: sensorId,
+                ssid: sensorId,
+                hiveId: UNKNOWN_HIVE_ID,
+                deviceId: null,
+                boxId: null,
+                type1: 'UNKNOWN_1',
+                type2: 'UNKNOWN_2',
+                frameGapIndex: 0,
+                calibration: 0,
+            });
         }
 
         const dataPoints: IReading[] = [];

@@ -12,10 +12,10 @@ export class DeviceDatabaseRepository implements IDeviceRepository {
         this._context = databaseContext;
     }
 
-    public async findBySerial (serial: string): Promise<INullable<Device>> {
+    public async findBySerial (ssid: string): Promise<INullable<Device>> {
         const model: INullable<DeviceModel> = await this._context.models.device.findOne({
             where: {
-                serial: serial,
+                id: ssid,
             },
         });
 
@@ -32,5 +32,17 @@ export class DeviceDatabaseRepository implements IDeviceRepository {
         await newDevice.save();
 
         return device;
+    }
+
+    public async findAllByHiveId (hiveId: string): Promise<Device[]> {
+        const models: DeviceModel[] = await this._context.models.device.findAll({
+            where: {
+                hiveId: hiveId,
+            },
+        });
+
+        return models.map((model: DeviceModel): Device => {
+            return model.toDevice();
+        });
     }
 }
